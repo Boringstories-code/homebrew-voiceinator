@@ -21,9 +21,8 @@ cask "voiceinator" do
 
   # Voiceinator is free and not notarized. Clearing quarantine here is what
   # lets a brew install open on the first launch with no Gatekeeper dialog.
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-cr", "#{appdir}/Voiceinator.app"]
+  postflight_steps do
+    run "/usr/bin/xattr", args: ["-cr", "{{appdir}}/Voiceinator.app"]
   end
 
   zap trash: [
