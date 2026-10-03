@@ -1,6 +1,6 @@
 cask "voiceinator" do
-  version "1.0.0-db0eb79"
-  sha256 "d64be0eee0d3f6e98203f77876a4dadb4e97bdcba5d8f3e8305b0c336b81b5bd"
+  version "1.0.0"
+  sha256 "bf66fe87793acec8995c845933ce640bcdf6153cdb10bb9155cedd59a4c5feea"
 
   url "https://updates.boringlabs.online/Voiceinator-#{version}.dmg"
   name "Voiceinator"
@@ -10,7 +10,7 @@ cask "voiceinator" do
   livecheck do
     url "https://updates.boringlabs.online/manifest.json"
     strategy :json do |json|
-      json["shortVersion"]
+      json["shortVersion"][/^\d+(?:\.\d+)+/]
     end
   end
 
