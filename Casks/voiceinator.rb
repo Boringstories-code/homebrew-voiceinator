@@ -1,6 +1,6 @@
 cask "voiceinator" do
-  version "1.0.0"
-  sha256 "bf66fe87793acec8995c845933ce640bcdf6153cdb10bb9155cedd59a4c5feea"
+  version "1.2.2"
+  sha256 "7517f8a4c7bb5bb1e59696eee0e302f9d6933c2c3b05555faa579943d9fc845c"
 
   url "https://updates.boringlabs.online/Voiceinator-#{version}.dmg"
   name "Voiceinator"
